@@ -47,6 +47,7 @@ function App() {
         </section>
         <section id="project" className="w-full py-12 md:py-24 lg:py-32 bg-muted" ref={projectRef}>
           <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">Project Wargavi48</h2>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               <ProjectCard imageLink="https://pbs.twimg.com/media/GD3zIuLbEAASz3Y?format=jpg&name=medium" title="#50KPiaraan" description='Project to Celebrate 50K Subscriber Pia Meraleo on Youtube.' projectLink='https://x.com/wargavirtual48/status/1746819564032397382'/>
               <ProjectCard imageLink="https://pbs.twimg.com/media/GKNJWeEbsAAXZVi?format=jpg&name=medium" title="#KaianyaUdah50k" description='Project to Celebrate 50K Subscriber Kanaia Asa on Youtube.' projectLink='https://x.com/wargavirtual48/status/1775343472830242827'/>
