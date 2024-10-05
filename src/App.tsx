@@ -56,7 +56,6 @@ function App() {
               <ProjectCard imageLink="https://pbs.twimg.com/media/GLr_S3KbQAATVFL?format=jpg&name=medium" title="#LelanaTana" description='Project to Celebrate Tana Nona 19th Birthday' projectLink='https://x.com/wargavirtual48/status/1782018067008303498'/>
               <ProjectCard imageLink="https://pbs.twimg.com/media/GTp0hDHbUAAkc23?format=jpg&name=medium" title="#NarcissiPiammetta" description='Project to Celebrate Pia Meraleo 18th Birthday' projectLink='https://x.com/wargavirtual48/status/1817893866923552768'/>
               <ProjectCard imageLink="https://pbs.twimg.com/media/GVLktTRawAAqZCy?format=jpg&name=medium" title="WGV:Dreamcatcher" description='Project to Celebrate 1st Anniversarry JKT48V' projectLink='https://wargavirtual48.github.io/wgvdreamcatcher'/>
-              
             </div>
           </div>
         </section>
