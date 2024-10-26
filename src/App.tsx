@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import { useRef } from "react"
 import ProjectCard from "./components/ProjectCard"
+import projectData from './Constant/Project'
 
 
 function App() {
@@ -49,13 +50,9 @@ function App() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">Project Wargavi48</h2>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              <ProjectCard imageLink="https://pbs.twimg.com/media/GD3zIuLbEAASz3Y?format=jpg&name=medium" title="#50KPiaraan" description='Project to Celebrate 50K Subscriber Pia Meraleo on Youtube.' projectLink='https://x.com/wargavirtual48/status/1746819564032397382'/>
-              <ProjectCard imageLink="https://pbs.twimg.com/media/GKNJWeEbsAAXZVi?format=jpg&name=medium" title="#KaianyaUdah50k" description='Project to Celebrate 50K Subscriber Kanaia Asa on Youtube.' projectLink='https://x.com/wargavirtual48/status/1775343472830242827'/>
-              <ProjectCard imageLink="https://pbs.twimg.com/media/GJKLBuhbwAAtuud?format=jpg&name=medium" title="#Ngeri50k" description='Project to Celebrate 50K Subscriber Tana Nona on Youtube.' projectLink='https://x.com/wargavirtual48/status/1770631077851467858'/>
-              <ProjectCard imageLink="https://pbs.twimg.com/media/GHg02bUbMAA-xEN?format=jpg&name=medium" title="#D1scoverin9ANewOcean" description='Project to Celebrate Kanaia Asa 19th Birthday' projectLink='https://x.com/wargavirtual48/status/1763217509833187334'/>
-              <ProjectCard imageLink="https://pbs.twimg.com/media/GLr_S3KbQAATVFL?format=jpg&name=medium" title="#LelanaTana" description='Project to Celebrate Tana Nona 19th Birthday' projectLink='https://x.com/wargavirtual48/status/1782018067008303498'/>
-              <ProjectCard imageLink="https://pbs.twimg.com/media/GTp0hDHbUAAkc23?format=jpg&name=medium" title="#NarcissiPiammetta" description='Project to Celebrate Pia Meraleo 18th Birthday' projectLink='https://x.com/wargavirtual48/status/1817893866923552768'/>
-              <ProjectCard imageLink="https://pbs.twimg.com/media/GVLktTRawAAqZCy?format=jpg&name=medium" title="WGV:Dreamcatcher" description='Project to Celebrate 1st Anniversarry JKT48V' projectLink='https://wargavirtual48.github.io/wgvdreamcatcher'/>
+                {projectData.map((data, index) => (
+                  <ProjectCard imageLink={data.imageLink} title={data.title} description={data.description} projectLink={data.projectLink} key={index}/>
+                ))}
             </div>
           </div>
         </section>
