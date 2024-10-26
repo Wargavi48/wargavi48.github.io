@@ -30,7 +30,7 @@ function App() {
                 </div>
               </div>
               <img
-                src="/placeholder.svg"
+                src="/heroImage.jpg"
                 width="550"
                 height="550"
                 alt="Hero"
@@ -43,9 +43,7 @@ function App() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">About Wargavi48</h2>
             <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl text-center">
-              We are a diverse group of artists, technologists, and visionaries working together to create innovative
-              projects that inspire and engage our community. Our mission is to blend art and technology in ways that
-              make our world more beautiful, interactive, and connected.
+            Kami Wargavi48, fanbase JKT48V yang saat ini beranggotakan (Kanaia asa, Tana nona dan Pia Meraleo). Nama <strong>"Wargavi48"</strong> dipilih karena kami adalah warga virtual yang memberikan dukungan untuk 48V, dan tentu saja, setiap warga memiliki "KTP" mereka sendiri.
             </p>
           </div>
         </section>
