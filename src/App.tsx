@@ -43,7 +43,7 @@ function App() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">About Wargavi48</h2>
             <p className="mx-auto max-w-[700px] text-gray-700 md:text-xl text-center">
-            Kami Wargavi48, fanbase JKT48V yang saat ini beranggotakan (Kanaia asa, Tana nona dan Pia Meraleo). Nama <strong>"Wargavi48"</strong> dipilih karena kami adalah warga virtual yang memberikan dukungan untuk 48V, dan tentu saja, setiap warga memiliki "KTP" mereka sendiri.
+            Kami Wargavi48, fanbase JKT48V yang saat ini beranggotakan (Kanaia asa, Tana nona dan Pia Meraleo). Nama <strong>"Wargavi48"</strong> dipilih karena kami adalah warga virtual yang memberikan dukungan untuk 48V, dan tentu saja, setiap warga memiliki "KTP" mereka sendiri. Kami ingin menjadi wadah yang bersatu bagi semua kalangan, termasuk <strong>penggemar JKT48 dan penggemar VTuber</strong>, untuk bersama-sama mendukung JKT48V. Fanbase ini akan menggunakan platform Discord sebagai tempat berkumpulnya para penggemar, mirip dengan konsep Fancord VTuber. Dengan inti yang serupa dengan fanbase JKT48 pada umumnya, tujuan utamanya adalah membangun komunitas yang solid dan berdedikasi dalam mendukung perjalanan JKT48V.
             </p>
           </div>
         </section>
