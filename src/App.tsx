@@ -1,7 +1,9 @@
 import Header from '@/components/Header'
 import { useRef } from "react"
 import ProjectCard from "./components/ProjectCard"
+import CardSlider from './components/CardSlider'
 import projectData from './Constant/Project'
+import comicData from './Constant/Comic'
 
 
 function App() {
@@ -55,6 +57,10 @@ function App() {
                 ))}
             </div>
           </div>
+        </section>
+        <section id="comic">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">Comic Wargavi48</h2>
+            <CardSlider cards={comicData} />
         </section>
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
