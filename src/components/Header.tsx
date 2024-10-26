@@ -3,9 +3,10 @@ interface HeaderProps {
     homeRef: React.RefObject<HTMLDivElement>;
     aboutRef: React.RefObject<HTMLDivElement>;
     projectRef: React.RefObject<HTMLDivElement>;
+    comicRef: React.RefObject<HTMLDivElement>;
   }
 
-const Header = ({ homeRef, aboutRef, projectRef }: HeaderProps) => {
+const Header = ({ homeRef, aboutRef, projectRef, comicRef }: HeaderProps) => {
   
     const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
       ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -21,6 +22,9 @@ const Header = ({ homeRef, aboutRef, projectRef }: HeaderProps) => {
                 </div>
                 <div className="text-sm font-medium hover:underline underline-offset-4 cursor-pointer" onClick={() => scrollToRef(projectRef)}>
                     Projects
+                </div>
+                <div className="text-sm font-medium hover:underline underline-offset-4 cursor-pointer" onClick={() => scrollToRef(comicRef)}>
+                    Comic
                 </div>
                 <a href="https://wargavi48.github.io/discord" className="text-sm font-medium hover:underline underline-offset-4">
                     Join Us

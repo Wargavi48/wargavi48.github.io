@@ -10,10 +10,11 @@ function App() {
   const homeRef = useRef<HTMLDivElement>(null)
   const aboutRef = useRef<HTMLDivElement>(null)
   const projectRef = useRef<HTMLDivElement>(null)
+  const comicRef = useRef<HTMLDivElement>(null)
 
   return (
     <div className="flex flex-col min-h-[100dvh]" ref={homeRef}>
-      <Header homeRef={homeRef} aboutRef={aboutRef} projectRef={projectRef}/>
+      <Header homeRef={homeRef} aboutRef={aboutRef} projectRef={projectRef} comicRef={comicRef}/>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
@@ -58,7 +59,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section id="comic">
+        <section id="comic" ref={comicRef}>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">Comic Wargavi48</h2>
             <CardSlider cards={comicData} />
         </section>
