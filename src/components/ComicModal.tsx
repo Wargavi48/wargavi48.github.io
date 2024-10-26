@@ -12,7 +12,7 @@ interface ComicModalProps {
 const ComicModal: React.FC<ComicModalProps> = ({ comic, images, onClose }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-[rgba(0,0,0,0.5)] z-50">
-      <div className="bg-white p-6 rounded-lg max-w-[60vw] max-h-[90vh] relative overflow-y-auto">
+      <div className="bg-white p-6 rounded-lg max-w-[90vw] max-h-[90vh] relative overflow-y-auto md:max-w-[80vw] lg:max-w-[60vw]">
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-3xl"
