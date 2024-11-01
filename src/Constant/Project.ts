@@ -55,6 +55,12 @@ const projectData = [
         description: 'Project to Celebrate 1st Anniversarry JKT48V',
         projectLink: '/wgvdreamcatcher'
     },
+    {
+        imageLink: 'https://pbs.twimg.com/ext_tw_video_thumb/1842948577489993728/pu/img/z3esotNz0TwJ214D.jpg',
+        title: '#2ndGathWargavi48',
+        description: '2nd Online Gathering WARGAVI48',
+        projectLink: 'https://twitter.com/wargavirtual48/status/1842948513367535908'
+    },
 ]
 
 
