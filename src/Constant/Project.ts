@@ -56,6 +56,7 @@ const projectData = [
         projectLink: '/wgvdreamcatcher'
     },
     {
+        id: 9,
         imageLink: 'https://pbs.twimg.com/ext_tw_video_thumb/1842948577489993728/pu/img/z3esotNz0TwJ214D.jpg',
         title: '#2ndGathWargavi48',
         description: '2nd Online Gathering WARGAVI48',
