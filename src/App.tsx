@@ -1,9 +1,9 @@
 import Header from '@/components/Header'
 import { useRef } from "react"
-import ProjectCard from "./components/ProjectCard"
 import CardSlider from './components/CardSlider'
 import projectData from './Constant/Project'
 import comicData from './Constant/Comic'
+import ProjectCardSlider from './components/ProjectCardSlider'
 
 
 function App() {
@@ -50,11 +50,7 @@ function App() {
         <section id="project" className="w-full py-12 md:py-24 lg:py-32 bg-muted" ref={projectRef}>
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">Project Wargavi48</h2>
-            <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {projectData.map((data, index) => (
-                  <ProjectCard imageLink={data.imageLink} title={data.title} description={data.description} projectLink={data.projectLink} key={index}/>
-                ))}
-            </div>
+            <ProjectCardSlider cards={projectData}/>
           </div>
         </section>
         <section id="comic" ref={comicRef}>
