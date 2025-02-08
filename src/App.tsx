@@ -5,7 +5,7 @@ import projectData from './Constant/Project'
 import comicData from './Constant/Comic'
 import ProjectCardSlider from './components/ProjectCardSlider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiscord, faX } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
                     <FontAwesomeIcon icon={faDiscord} size="lg" className="text-[#5865F2]" />
                   </a>
                   <a href="https://x.com/wargavirtual48" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faX} size="lg" className="text-[#FF0000]" />
+                    <FontAwesomeIcon icon={faXTwitter} size="lg" className="text-[#FF0000]" />
                   </a>
                 </div>
               </div>
