@@ -4,6 +4,8 @@ import CardSlider from './components/CardSlider'
 import projectData from './Constant/Project'
 import comicData from './Constant/Comic'
 import ProjectCardSlider from './components/ProjectCardSlider'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord, faX } from '@fortawesome/free-brands-svg-icons';
 
 
 function App() {
@@ -20,14 +22,22 @@ function App() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Wargavi48
-                  </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    Chill and Cozy Fanbase of JKT48V (<a className="hover:text-[#8ab2ea] duration-500"  href="https://www.youtube.com/@KanaiaAsa-JKT48V">Kanaia Asa</a>, <a className="hover:text-[#843E61] duration-500" href="https://www.youtube.com/@TanaNona-JKT48V">Tana Nona</a>, <a className="hover:text-[#D1B2A4] duration-500" href="https://www.youtube.com/@PiaMeraleo-JKT48V">Pia Meraleo</a>)
-                  </p>
+              <div className="space-y-2">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  Wargavi48
+                </h1>
+                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  Chill and Cozy Fanbase of JKT48V (<a className="hover:text-[#8ab2ea] duration-500"  href="https://www.youtube.com/@KanaiaAsa-JKT48V">Kanaia Asa</a>, <a className="hover:text-[#843E61] duration-500" href="https://www.youtube.com/@TanaNona-JKT48V">Tana Nona</a>, <a className="hover:text-[#D1B2A4] duration-500" href="https://www.youtube.com/@PiaMeraleo-JKT48V">Pia Meraleo</a>)
+                </p>
+                <div className="flex gap-2">
+                  <a href="https://wargavi48.github.io/discord" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faDiscord} size="lg" className="text-[#5865F2]" />
+                  </a>
+                  <a href="https://x.com/wargavirtual48" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faX} size="lg" className="text-[#FF0000]" />
+                  </a>
                 </div>
+              </div>
               </div>
               <img
                 src="/heroImage.jpg"
