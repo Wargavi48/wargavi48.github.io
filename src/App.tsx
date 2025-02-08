@@ -43,7 +43,7 @@ function App() {
                   <a href="https://www.tokopedia.com/wargavi48" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faShoppingCart} size="lg" className="text-[#15b11f]" />
                   </a>
-                  <a href="https://trakteer.id/wargavi48" target="_blank"><img id="wse-buttons-preview" src="https://edge-cdn.trakteer.id/images/embed/trbtn-red-1.png?v=24-01-2025" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+                  <a href="https://trakteer.id/wargavi48" target="_blank"><img id="wse-buttons-preview" src="https://edge-cdn.trakteer.id/images/embed/trbtn-red-1.png?v=24-01-2025" style={{border: 0, height: 40}} alt="Trakteer Saya"/></a>
                 </div>
               </div>
               </div>
