@@ -5,7 +5,7 @@ import projectData from './Constant/Project'
 import comicData from './Constant/Comic'
 import ProjectCardSlider from './components/ProjectCardSlider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiscord, faXTwitter, faSquareSteam  } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faXTwitter, faSquareSteam, faTiktok  } from '@fortawesome/free-brands-svg-icons';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -23,19 +23,22 @@ function App() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
+              <div className="space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                   Wargavi48
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
                   Chill and Cozy Fanbase of JKT48V (<a className="hover:text-[#8ab2ea] duration-500"  href="https://www.youtube.com/@KanaiaAsa-JKT48V">Kanaia Asa</a>, <a className="hover:text-[#843E61] duration-500" href="https://www.youtube.com/@TanaNona-JKT48V">Tana Nona</a>, <a className="hover:text-[#D1B2A4] duration-500" href="https://www.youtube.com/@PiaMeraleo-JKT48V">Pia Meraleo</a>)
                 </p>
-                <div className="flex gap-2">
+                <div className="flex gap-2 items-center">
                   <a href="https://wargavi48.github.io/discord" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faDiscord} size="lg" className="text-[#5865F2]" />
                   </a>
                   <a href="https://x.com/wargavirtual48" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faXTwitter} size="lg" className="text-[#000000]" />
+                    <FontAwesomeIcon icon={faXTwitter} size="lg" className="text-black" />
+                  </a>
+                  <a href='https://tiktok.com/@wargavi48' target='_blank' rel='noopener noreferrer'>
+                    <FontAwesomeIcon icon={faTiktok} size='lg' className='text-black' />
                   </a>
                   <a href="https://store.steampowered.com/app/3037900/WGV_Dreamcatcher" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faSquareSteam} size="lg" className="text-[#1b2738]" />
@@ -43,6 +46,8 @@ function App() {
                   <a href="https://www.tokopedia.com/wargavi48" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faShoppingCart} size="lg" className="text-[#15b11f]" />
                   </a>
+                </div>
+                <div>
                   <a href="https://trakteer.id/wargavi48" target="_blank"><img id="wse-buttons-preview" src="https://edge-cdn.trakteer.id/images/embed/trbtn-red-1.png?v=24-01-2025" style={{border: 0, height: 40}} alt="Trakteer Saya"/></a>
                 </div>
               </div>
