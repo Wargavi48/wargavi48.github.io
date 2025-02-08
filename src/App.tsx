@@ -34,8 +34,15 @@ function App() {
                     <FontAwesomeIcon icon={faDiscord} size="lg" className="text-[#5865F2]" />
                   </a>
                   <a href="https://x.com/wargavirtual48" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faXTwitter} size="lg" className="text-[#FF0000]" />
+                    <FontAwesomeIcon icon={faXTwitter} size="lg" className="text-[#000000]" />
                   </a>
+                  <a href="https://store.steampowered.com/app/3037900/WGV_Dreamcatcher" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon="fa-brands fa-square-steam" size="lg" className="text-[#1b2738]" />
+                  </a>
+                  <a href="https://www.tokopedia.com/wargavi48" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={fa-solid fa-cart-shopping} size="lg" className="text-[#15b11f]" />
+                  </a>
+                  <a href="https://trakteer.id/wargavi48" target="_blank"><img id="wse-buttons-preview" src="https://edge-cdn.trakteer.id/images/embed/trbtn-red-1.png?v=24-01-2025" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
                 </div>
               </div>
               </div>
