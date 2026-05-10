@@ -2,6 +2,8 @@ const comicData = [
     { id: 1, thumbnail: '/Comic/Thumbnail/Lemon.jpg', title: 'Lemon' },
     { id: 2, thumbnail: '/Comic/Thumbnail/Tini Nyangkut.png', title: 'Tini Nyangkut' },
     { id: 3, thumbnail: '/Comic/Thumbnail/Haircut.png', title: 'a little bit more... ✂️' },
+    { id: 4, thumbnail: '/Comic/Thumbnail/TSKR.png', title: 'TSKR' },
+    { id: 5, thumbnail: '/Comic/Thumbnail/gohan.png', title: 'Gohan wo taberu~?' },
 ]
 
 export const comicContent = {
@@ -13,11 +15,17 @@ export const comicContent = {
         '/Comic/Tini Nyangkut/komik_ktp_2.jpg',
         '/Comic/Tini Nyangkut/komik_ktp_3.jpg',
         '/Comic/Tini Nyangkut/komik_ktp_4.jpg',
-        '/Comic/Tini Nyangkut/komik_ktp_5.jpg',
+        '/Comic/Tini Nyangkut/komik_ktp_5.jpg'
     ],
-    "a little bit more... ✂️": [
+    "A little bit more... ✂️": [
         '/Comic/Haircut/Haircut.jpg'
-    ]
+    ],
+    "TSKR 🙏🏻 #Isha4K": [
+        '/Comic/TSKR/tskr.jpg'
+    ],
+    "Gohan wo taberu~? #Piallete": [
+        '/Comic/Gohan wo taberu/gohan.jpg'
+    ],
 }
 
 export default comicData

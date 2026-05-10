@@ -1,62 +1,81 @@
 interface HeaderProps {
-    homeRef: React.RefObject<HTMLDivElement>;
-    aboutRef: React.RefObject<HTMLDivElement>;
-    projectRef: React.RefObject<HTMLDivElement>;
-    comicRef: React.RefObject<HTMLDivElement>;
-  }
+  homeRef: React.RefObject<HTMLDivElement>;
+  aboutRef: React.RefObject<HTMLDivElement>;
+  projectRef: React.RefObject<HTMLDivElement>;
+  comicRef: React.RefObject<HTMLDivElement>;
+}
+
+const Header = ({ homeRef, aboutRef, projectRef, comicRef }: HeaderProps) => {
+  const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const toggleTheme = () => {
+    const root = document.documentElement;
+    const nextIsDark = !root.classList.contains("dark");
+    root.classList.toggle("dark", nextIsDark);
+    localStorage.setItem("theme", nextIsDark ? "dark" : "light");
+  };
   
-  const Header = ({ homeRef, aboutRef, projectRef, comicRef }: HeaderProps) => {
-    const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
-      ref.current?.scrollIntoView({ behavior: "smooth" });
-    };
-  
-    return (
-      <header className="px-4 lg:px-6 h-14 flex items-center fixed w-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100">
-        <div className="flex items-center justify-center cursor-pointer">
-          <img
-            src="https://avatars.githubusercontent.com/u/161864106?s=200&v=4"
-            className="w-12 h-12"
+  return (
+    <header className="fixed inset-x-0 top-0 z-40 px-3 pt-3 md:px-5">
+      <div className="mx-auto flex h-16 w-full max-w-6xl items-center rounded-2xl border border-white/25 bg-white/80 px-4 text-sm backdrop-blur-md dark:border-white/10 dark:bg-[#251f27]/85 md:px-6">
+        <div className="flex items-center gap-3">
+          <button
             onClick={() => scrollToRef(homeRef)}
-          />
+            className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl border border-black/5 bg-white dark:border-white/10 dark:bg-[#332b34]"
+          >
+            <img
+              src="https://avatars.githubusercontent.com/u/161864106?s=200&v=4"
+              className="h-9 w-9"
+              alt="Wargavi48 logo"
+            />
+          </button>
+          <button onClick={() => scrollToRef(homeRef)} className="text-left">
+            <p className="text-base font-bold leading-none">Wargavi48</p>
+            <p className="text-[11px] font-medium text-[#7c6774] dark:text-[#d8c0c7]">Community Hub</p>
+          </button>
         </div>
-        <nav className="ml-auto flex gap-4 sm:gap-6 justify-center items-center">
-          <div
-            className="text-sm font-medium hover:underline underline-offset-4 cursor-pointer text-gray-800 dark:text-gray-100"
+
+        <nav className="ml-auto flex items-center gap-1.5 md:gap-2">
+          <button
+            className="rounded-lg px-2.5 py-2 font-semibold text-[#5d4e58] transition hover:bg-white/70 dark:text-[#e5d5db] dark:hover:bg-white/10 md:px-3"
             onClick={() => scrollToRef(aboutRef)}
           >
             About
-          </div>
-          <div
-            className="text-sm font-medium hover:underline underline-offset-4 cursor-pointer text-gray-800 dark:text-gray-100"
+          </button>
+          <button
+            className="rounded-lg px-2.5 py-2 font-semibold text-[#5d4e58] transition hover:bg-white/70 dark:text-[#e5d5db] dark:hover:bg-white/10 md:px-3"
             onClick={() => scrollToRef(projectRef)}
           >
             Projects
-          </div>
-          <div
-            className="text-sm font-medium hover:underline underline-offset-4 cursor-pointer text-gray-800 dark:text-gray-100"
+          </button>
+          <button
+            className="rounded-lg px-2.5 py-2 font-semibold text-[#5d4e58] transition hover:bg-white/70 dark:text-[#e5d5db] dark:hover:bg-white/10 md:px-3"
             onClick={() => scrollToRef(comicRef)}
           >
-            Comic
-          </div>
+            Comics
+          </button>
           <a
             href="https://wargavi48.github.io/discord"
-            className="text-sm font-medium hover:underline underline-offset-4 text-gray-800 dark:text-gray-100"
+            className="hidden rounded-lg bg-[#ab0d00] px-3 py-2 font-semibold text-white transition hover:bg-[#8b0900] dark:bg-[#ff5f4f] dark:text-[#1d1111] dark:hover:bg-[#ff7163] md:inline-flex"
           >
             Join Us
           </a>
           <button
-            onClick={() => document.body.classList.toggle("dark")}
-            className="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-500"
+            onClick={toggleTheme}
+            className="ml-1 flex h-10 w-10 items-center justify-center rounded-lg border border-black/5 bg-white/70 transition hover:bg-white dark:border-white/10 dark:bg-white/10 dark:hover:bg-white/20"
+            aria-label="Toggle theme"
           >
             <svg
-              className="fill-violet-700 block dark:hidden"
+              className="block fill-[#ab0d00] dark:hidden"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
               <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
             </svg>
             <svg
-              className="fill-yellow-500 hidden dark:block"
+              className="hidden fill-[#ff5f4f] dark:block"
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -68,8 +87,9 @@ interface HeaderProps {
             </svg>
           </button>
         </nav>
-      </header>
-    );
-  };
-  
-  export default Header;
+      </div>
+    </header>
+  );
+};
+
+export default Header;
