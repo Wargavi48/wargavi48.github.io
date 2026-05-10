@@ -90,9 +90,9 @@ const projectData = [
     {
         id: 12,
         imageLink: 'https://pbs.twimg.com/media/GjrDNw1aMAAieB8?format=jpg&name=orig',
-        title: '#KeyToParadise',
+        title: '#ChekiChoco #KeyToParadise',
         description: 'Project to Celebrate Valentine Day 2025 with JKT48V',
-        article: '🌤️🔐Key To Paradise🔐🌤️\nHeeey para warga~\nBesok hari Valentine dan KTP bakal ada baju baru nih!\nUntuk merayakan Project Outfit 2.0 dan Valentine, Minvi udah nyiapin project seru:\n\n#KeyToParadise \n#ChekiChoco\n#KanaBaru\n#TanaBaru\n#PiaBaru',
+        article: '🌤️🔐Key To Paradise🔐🌤️\nHeeey para warga~\nBesok hari Valentine dan KTP bakal ada baju baru nih!\nUntuk merayakan Project Outfit 2.0 dan Valentine, Minvi udah nyiapin project seru:\n\nSiapa yang mau foto berdua sama KTP?\nAku! Aku! Aku!\nMinVi adain Cheki 2Shot Online nih, hehehe 😆\nKalian bisa akses linknya di sini\n👇👇👇\nhttps://wargavi48.github.io/chekichoco\n#KeyToParadise \n#ChekiChoco\n#KanaBaru\n#TanaBaru\n#PiaBaru',
         projectLink: 'https://x.com/wargavirtual48/status/1890038267841823071'
     },
     {
