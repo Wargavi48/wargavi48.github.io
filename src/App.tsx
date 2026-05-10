@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react"
 import CardSlider from './components/CardSlider'
 import projectData from './Constant/Project'
 import comicData from './Constant/Comic'
+import webAppsData from './Constant/WebApps'
 import ProjectCardSlider from './components/ProjectCardSlider'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faXTwitter, faSquareSteam, faTiktok  } from '@fortawesome/free-brands-svg-icons';
@@ -12,6 +13,7 @@ function App() {
   const homeRef = useRef<HTMLDivElement>(null)
   const aboutRef = useRef<HTMLDivElement>(null)
   const projectRef = useRef<HTMLDivElement>(null)
+  const webAppsRef = useRef<HTMLDivElement>(null)
   const comicRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -47,7 +49,7 @@ function App() {
 
   return (
     <div className="flex min-h-[100dvh] flex-col" ref={homeRef}>
-      <Header homeRef={homeRef} aboutRef={aboutRef} projectRef={projectRef} comicRef={comicRef} />
+      <Header homeRef={homeRef} aboutRef={aboutRef} projectRef={projectRef} comicRef={comicRef} webAppsRef={webAppsRef} />
       <main className="flex-1 pt-20">
         <section className="section-shell relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(255,1,1,0.20),transparent_35%),radial-gradient(circle_at_85%_25%,rgba(171,13,0,0.18),transparent_40%)]" />
@@ -189,6 +191,18 @@ function App() {
               </div>
             </div>
             <CardSlider cards={comicData} />
+          </div>
+        </section>
+
+        <section id="web-apps" className="section-shell panel-surface" ref={webAppsRef}>
+          <div className="container px-4 md:px-6">
+            <div className="mb-8 flex items-end justify-between gap-3">
+              <div>
+                <span className="tone-chip mb-2">Tools & Platforms</span>
+                <h2 className="text-3xl font-black sm:text-4xl">Apps</h2>
+              </div>
+            </div>
+            <ProjectCardSlider cards={webAppsData} />
           </div>
         </section>
       </main>

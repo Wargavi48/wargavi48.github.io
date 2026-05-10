@@ -2,10 +2,11 @@ interface HeaderProps {
   homeRef: React.RefObject<HTMLDivElement>;
   aboutRef: React.RefObject<HTMLDivElement>;
   projectRef: React.RefObject<HTMLDivElement>;
+  webAppsRef: React.RefObject<HTMLDivElement>;
   comicRef: React.RefObject<HTMLDivElement>;
 }
 
-const Header = ({ homeRef, aboutRef, projectRef, comicRef }: HeaderProps) => {
+const Header = ({ homeRef, aboutRef, projectRef, webAppsRef, comicRef }: HeaderProps) => {
   const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -55,6 +56,12 @@ const Header = ({ homeRef, aboutRef, projectRef, comicRef }: HeaderProps) => {
             onClick={() => scrollToRef(comicRef)}
           >
             Comics
+          </button>          
+          <button
+            className="rounded-lg px-2.5 py-2 font-semibold text-[#5d4e58] transition hover:bg-white/70 dark:text-[#e5d5db] dark:hover:bg-white/10 md:px-3"
+            onClick={() => scrollToRef(webAppsRef)}
+          >
+            Apps
           </button>
           <a
             href="https://wargavi48.github.io/discord"

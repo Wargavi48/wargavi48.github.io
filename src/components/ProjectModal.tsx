@@ -13,12 +13,18 @@ interface ProjectModalProps {
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   const [isClosing, setIsClosing] = useState(false);
+  const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
   const urlRegex = /(https?:\/\/[^\s<>"']+)/g;
   const iframeSrcRegex = /<iframe[^>]*src=["'](https?:\/\/[^"']+)["'][^>]*>(?:<\/iframe>)?/gi;
   const iframeLinks = Array.from(project.article.matchAll(iframeSrcRegex)).map((match) => match[1]);
   const embedLinks = Array.from(new Set(iframeLinks));
   const articleText = project.article.replace(iframeSrcRegex, "").trim();
-  const articleParts = articleText.split(urlRegex);
+  const markdownLinks = Array.from(articleText.matchAll(markdownLinkRegex)).map((match) => ({
+    label: match[1],
+    href: match[2],
+  }));
+  const articleTextWithoutMarkdownLinks = articleText.replace(markdownLinkRegex, (_, label: string) => label);
+  const articleParts = articleTextWithoutMarkdownLinks.split(urlRegex);
 
   useEffect(() => {
     if (!isClosing) return;
@@ -85,7 +91,33 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                   </a>
                 );
               }
-              return <React.Fragment key={`text-${index}`}>{part}</React.Fragment>;
+              let segment = part;
+              markdownLinks.forEach((link) => {
+                segment = segment.replace(link.label, `__LINK_LABEL__${link.label}__`);
+              });
+              const tokenized = segment.split(/(__LINK_LABEL__.*?__)/g);
+              return (
+                <React.Fragment key={`text-${index}`}>
+                  {tokenized.map((token, tokenIndex) => {
+                    const tokenMatch = token.match(/^__LINK_LABEL__(.*?)__$/);
+                    if (!tokenMatch) return <React.Fragment key={`seg-${tokenIndex}`}>{token}</React.Fragment>;
+                    const label = tokenMatch[1];
+                    const markdownLink = markdownLinks.find((item) => item.label === label);
+                    if (!markdownLink) return <React.Fragment key={`seg-${tokenIndex}`}>{label}</React.Fragment>;
+                    return (
+                      <a
+                        key={`seg-${tokenIndex}`}
+                        href={markdownLink.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-[var(--brand)] underline decoration-2 underline-offset-2"
+                      >
+                        {markdownLink.label}
+                      </a>
+                    );
+                  })}
+                </React.Fragment>
+              );
             })}
           </p>
         )}
