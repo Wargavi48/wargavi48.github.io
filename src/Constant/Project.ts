@@ -199,6 +199,14 @@ const projectData = [
         article: '🌦️☂️ ~Happy Birthday Tana~☂️🌦️\n\nKetika cahaya pagi dan hujan bertemu di langit yang sama, menyatu dalam kehangatan hingga mencerminkan awal dan harapan yang baru. Sebuah momen yang disebut “Rintik Arunika”.\n\n#21ntikArunika\n#TanaMini',
         projectLink: 'https://x.com/wargavirtual48/status/2046546827974246862'
     },
+    {
+        id: 26,
+        imageLink: 'https://pbs.twimg.com/media/HLQyBeMbIAAFVg-?format=jpg&name=orig',
+        title: '#Midn19htDaydream',
+        description: 'Celebrating Tana Mini 21st Birthday!',
+        article: '✺❄️ ~Happy Birthday Maura~❄️✺\n\nKetika lamunan meredam riuh menjadi sepi, menempatkan dirimu di antara khayalan dan kenyataan. Di bawah aurora yang berkelana, ragamu terlelap dalam hangatnya cahaya, temani bayangmu yang menari di antara rasi bintang✨\n\n#Midn19htDaydream',
+        projectLink: 'https://x.com/wargavirtual48/status/2068333140045922661'
+    },
 ]
 
 
