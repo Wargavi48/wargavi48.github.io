@@ -17,14 +17,14 @@ export const comicContent = {
         '/Comic/Tini Nyangkut/komik_ktp_4.jpg',
         '/Comic/Tini Nyangkut/komik_ktp_5.jpg'
     ],
-    "A little bit more... ✂️": [
-        '/Comic/Haircut/Haircut.jpeg'
+    "a little bit more... ✂️": [
+        '/Comic/Haircut/Haircut.jpg'
     ],
-    "TSKR 🙏🏻 #Isha4K": [
-        '/Comic/TSKR/tskr.jpeg'
+    "TSKR": [
+        '/Comic/TSKR/tskr.jpg'
     ],
-    "Gohan wo taberu~? #Piallete": [
-        '/Comic/Gohan wo taberu/gohan.jpeg'
+    "Gohan wo taberu~?": [
+        '/Comic/Gohan wo taberu/gohan.jpg'
     ],
 }
 
