@@ -9,9 +9,10 @@ interface ProjectModalProps {
     projectLink: string;
   };
   onClose: () => void;
+  mode?: "project" | "app";
 }
 
-const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose, mode = "project" }) => {
   const [isClosing, setIsClosing] = useState(false);
   const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
   const urlRegex = /(https?:\/\/[^\s<>"']+)/g;
@@ -71,7 +72,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             rel="noopener noreferrer"
             className="inline-flex w-fit rounded-lg bg-[var(--brand)] px-4 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-[#8f0a00] dark:bg-[#ff5f4f] dark:text-[#201213] dark:hover:bg-[#ff7265]"
           >
-            Go to Project
+            {mode === "app" ? "Go to App" : "Go to Project"}
           </a>
         </div>
         <p className="mb-4 text-base leading-7 text-[var(--text-soft)]">{project.description}</p>

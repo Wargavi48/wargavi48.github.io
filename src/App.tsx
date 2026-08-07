@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import { useEffect, useRef } from "react"
 import CardSlider from './components/CardSlider'
+import HeroSlider from './components/HeroSlider'
 import projectData from './Constant/Project'
 import comicData from './Constant/Comic'
 import webAppsData from './Constant/WebApps'
@@ -116,13 +117,7 @@ function App() {
 
               <div className="relative">
                 <div className="absolute -inset-2 rounded-2xl bg-gradient-to-br from-[var(--accent)]/15 to-transparent blur-xl" />
-                <img
-                  src="/heroImage.jpg"
-                  width="640"
-                  height="640"
-                  alt="Wargavi48 Hero"
-                  className="relative mx-auto aspect-square w-full max-w-[520px] rounded-2xl border border-white/35 object-cover shadow-2xl"
-                />
+                <HeroSlider />
               </div>
             </div>
           </div>
@@ -202,7 +197,7 @@ function App() {
                 <h2 className="text-3xl font-black sm:text-4xl">Apps</h2>
               </div>
             </div>
-            <ProjectCardSlider cards={webAppsData} />
+            <ProjectCardSlider cards={webAppsData} mode="app" />
           </div>
         </section>
       </main>

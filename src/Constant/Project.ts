@@ -203,9 +203,25 @@ const projectData = [
         id: 26,
         imageLink: 'https://pbs.twimg.com/media/HLQyBeMbIAAFVg-?format=jpg&name=orig',
         title: '#Midn19htDaydream',
-        description: 'Celebrating Tana Mini 21st Birthday!',
+        description: 'Celebrating Maura Nilambari 19th Birthday!',
         article: '✺❄️ ~Happy Birthday Maura~❄️✺\n\nKetika lamunan meredam riuh menjadi sepi, menempatkan dirimu di antara khayalan dan kenyataan. Di bawah aurora yang berkelana, ragamu terlelap dalam hangatnya cahaya, temani bayangmu yang menari di antara rasi bintang✨\n\n#Midn19htDaydream',
         projectLink: 'https://x.com/wargavirtual48/status/2068333140045922661'
+    },
+    {
+        id: 27,
+        imageLink: 'https://pbs.twimg.com/media/HOKJbqsaMAAiZj3?format=jpg&name=orig',
+        title: '#NonAktif #TONOfMemories',
+        description: 'Tana Nona\'s Graduation Project: #NonAktif #TONOfMemories',
+        article: '🌸Graduation Project: Tana Nona🌸\n\nDalam setiap stream, pasti akan selalu ada tombol untuk mengakhiri. Tombol yang menandakan bahwa semua kisah dan perjalanan telah tiba pada akhir ceritanya. Inilah sebuah Final Project sederhana dari kami, sebagai penutup dari perjalanan yang dilalui bersama Tana Nona.\n\nTerima kasih atas cinta, waktu, dan kerja kerasmu yang selalu membuat kami tersenyum selama 3 tahun ini. Sekarang Tana akan kembali ke desa sebagai gadis biasa.\n\n#NonAktif #TONOfMemories #TerimaKasihJKT48V',
+        projectLink: 'https://x.com/wargavirtual48/status/2081379031346524257?s=20'
+    },
+    {
+        id: 28,
+        imageLink: 'https://pbs.twimg.com/media/HOY-W2Tb0AA9AnX?format=jpg&name=orig',
+        title: '#TheUnforgottenOne',
+        description: 'Celebrating Pia Meraleo 20th Birthday!',
+        article: '🦖⏳~Happy Birthday Pia~⏳🦖\n\nWaktu tidak pernah berhenti dan sering kali memaksa kita melupakan banyak hal. Namun, eksistensi Pia seperti dinosaurus. Ia tidak akan hilang dari ingatan kita karena jejak karyanya tertinggal jelas sebagai bukti bahwa Pia pernah ada untuk mewarnai hari-hari para Piaraan.\n\nHappy 20th Birthday Pia Meraleo, #TheUnforgottenOne',
+        projectLink: 'https://x.com/wargavirtual48/status/2082466238811517427'
     },
 ]
 

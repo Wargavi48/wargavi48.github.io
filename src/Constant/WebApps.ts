@@ -7,7 +7,7 @@ const webAppsData = [
     description:
       "Community gateway for discussion, events, and fan coordination.",
     article:
-      "Join the main community hub to connect with other members, follow updates, and participate in activities.\nhttps://wargavi48.github.io/discord",
+      "Join the main community hub to connect with other members, follow updates, and participate in activities.",
     projectLink: "https://wargavi48.github.io/discord",
   },
   {
@@ -26,8 +26,8 @@ const webAppsData = [
       "https://pbs.twimg.com/media/GWdLi6AbkAAr_27?format=png&name=orig",
     title: "Wargavi48 KTV",
     description: "Web landing and information page for the KTV project.",
-    article: "Wargavi48 virtual ID Card.\nhttps://wargavi48.github.io/ktv/",
-    projectLink: "https://x.com/wargavirtual48/status/1830515339513508247",
+    article: "Wargavi48 virtual ID Card.\n\nSource tweet: https://x.com/wargavirtual48/status/1830515339513508247",
+    projectLink: "https://wargavi48.github.io/ktv/",
   },
   {
     id: 4,
@@ -36,8 +36,8 @@ const webAppsData = [
     title: "Bola-bola KTP",
     description: "JKT48V Generation 1 fan made suika game.",
     article:
-      "Selamat pagi para warga 🔆\nAda yang baru lagi nih dari minvi..\n\nKita berpacu dalam game gabut bola-bola KTP⚽\n\nhttps://wargavi48.github.io/bola-ktp\nP adu score bro 😎\n\n#Piallete #IrengDoesArt #Kanartea",
-    projectLink: "https://x.com/wargavirtual48/status/1830792687689310520",
+      "Selamat pagi para warga 🔆\nAda yang baru lagi nih dari minvi..\n\nKita berpacu dalam game gabut bola-bola KTP⚽\n\nP adu score bro 😎\n\n#Piallete #IrengDoesArt #Kanartea\n\nSource tweet: https://x.com/wargavirtual48/status/1830792687689310520",
+    projectLink: "https://wargavi48.github.io/bola-ktp",
   },
   {
     id: 5,
@@ -46,8 +46,8 @@ const webAppsData = [
     title: "#ChekiChoco #KeyToParadise",
     description: "Project to Celebrate Valentine Day 2025 with JKT48V",
     article:
-      "🌤️🔐Key To Paradise🔐🌤️\nHeeey para warga~\nBesok hari Valentine dan KTP bakal ada baju baru nih!\nUntuk merayakan Project Outfit 2.0 dan Valentine, Minvi udah nyiapin project seru:\n\nSiapa yang mau foto berdua sama KTP?\nAku! Aku! Aku!\nMinVi adain Cheki 2Shot Online nih, hehehe 😆\nKalian bisa akses linknya di sini\n👇👇👇\nhttps://wargavi48.github.io/chekichoco\n#KeyToParadise \n#ChekiChoco\n#KanaBaru\n#TanaBaru\n#PiaBaru",
-    projectLink: "https://x.com/wargavirtual48/status/1890038267841823071",
+      "🌤️🔐Key To Paradise🔐🌤️\nHeeey para warga~\nBesok hari Valentine dan KTP bakal ada baju baru nih!\nUntuk merayakan Project Outfit 2.0 dan Valentine, Minvi udah nyiapin project seru:\n\nSiapa yang mau foto berdua sama KTP?\nAku! Aku! Aku!\nMinVi adain Cheki 2Shot Online nih, hehehe 😆\n#KeyToParadise #ChekiChoco #KanaBaru #TanaBaru #PiaBaru\n\nSource tweet: https://x.com/wargavirtual48/status/1890038267841823071",
+    projectLink: "https://wargavi48.github.io/chekichoco",
   },
   {
     id: 6,
@@ -58,6 +58,16 @@ const webAppsData = [
     article:
       "Yuk main bingo bareng!!\n\nKalian bisa main bareng Minvi sambil nonton stream JKT48V.\n\nYuk tunggu apalagi, mainin sekarang juga!!\n\nhttps://wargavi48.github.io/bingo/",
     projectLink: "https://wargavi48.github.io/bingo/",
+  },
+  {
+    id: 7,
+    imageLink:
+      "https://pbs.twimg.com/media/HL0wGnpbQAAELre?format=png&name=orig",
+    title: "Grid JKT48V",
+    description: "JKT48V fan made grid game.",
+    article:
+      "Sambil dengerin SSB, kita mainan grid JKT48V guys\ncoba reply punya kalian gaes, ini punya minvi 😇\n\nSource tweet: https://x.com/wargavirtual48/status/2070864786020237662",
+    projectLink: "https://grids.fun/t/jkt48v-7ugvj?list=jktv-gfc3r",
   },
 ];
 

@@ -19,9 +19,10 @@ interface CardProps {
 
 interface CardSliderProps {
   cards: CardProps[];
+  mode?: "project" | "app";
 }
 
-const ProjectCardSlider: FC<CardSliderProps> = ({ cards }) => {
+const ProjectCardSlider: FC<CardSliderProps> = ({ cards, mode = "project" }) => {
   const shouldCenterSlides = cards.length < 4;
   const desktopSlides = Math.min(4, cards.length);
   const tabletSlides = Math.min(3, cards.length);
@@ -90,7 +91,7 @@ const ProjectCardSlider: FC<CardSliderProps> = ({ cards }) => {
         ))}
       </Swiper>
       {selectedProject && (
-        <ProjectModal project={selectedProject} onClose={closeModal} />
+        <ProjectModal project={selectedProject} onClose={closeModal} mode={mode} />
       )}
     </div>
   );
