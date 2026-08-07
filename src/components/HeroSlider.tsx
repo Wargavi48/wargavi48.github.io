@@ -27,13 +27,18 @@ const HeroSlider: FC<HeroSliderProps> = ({ images = heroImages }) => {
   // Single image: render a plain static hero image (no slider chrome).
   if (images.length <= 1) {
     return (
-      <img
-        src={images[0]}
-        width="640"
-        height="640"
-        alt="Wargavi48 Hero"
-        className="relative mx-auto aspect-square w-full max-w-[520px] rounded-2xl border border-white/35 object-cover shadow-2xl"
-      />
+      <div className="vhs-frame vhs-jitter relative mx-auto aspect-square w-full max-w-[520px] overflow-hidden rounded-2xl border border-white/35 shadow-2xl">
+        <img
+          src={images[0]}
+          width="640"
+          height="640"
+          alt="Wargavi48 Hero"
+          className="h-full w-full object-cover"
+        />
+        <div className="vhs-tracking" aria-hidden="true" />
+        <div className="vhs-noise" aria-hidden="true" />
+        <div className="vhs-vignette" aria-hidden="true" />
+      </div>
     )
   }
 
@@ -53,13 +58,18 @@ const HeroSlider: FC<HeroSliderProps> = ({ images = heroImages }) => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={image} className="flex justify-center">
-            <img
-              src={image}
-              width="640"
-              height="640"
-              alt={`Wargavi48 Hero ${index + 1}`}
-              className="aspect-square w-full rounded-2xl border border-white/35 object-cover shadow-2xl"
-            />
+            <div className="vhs-frame vhs-jitter aspect-square w-full overflow-hidden rounded-2xl border border-white/35 shadow-2xl">
+              <img
+                src={image}
+                width="640"
+                height="640"
+                alt={`Wargavi48 Hero ${index + 1}`}
+                className="h-full w-full object-cover"
+              />
+              <div className="vhs-tracking" aria-hidden="true" />
+              <div className="vhs-noise" aria-hidden="true" />
+              <div className="vhs-vignette" aria-hidden="true" />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

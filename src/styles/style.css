@@ -125,6 +125,113 @@
     font-weight: 700;
   }
 
+  /* ===== VHS effect ===== */
+  .vhs-frame {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Scanlines + flicker */
+  .vhs-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.22) 0px,
+      rgba(0, 0, 0, 0.22) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+    animation: vhs-flicker 0.14s steps(2) infinite;
+  }
+
+  /* Chromatic aberration (RGB split edges) */
+  .vhs-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    box-shadow:
+      inset -2px 0 0 rgba(255, 0, 60, 0.35),
+      inset 2px 0 0 rgba(0, 255, 255, 0.35);
+  }
+
+  /* Rolling tracking bar */
+  .vhs-tracking {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -25%;
+    height: 25%;
+    z-index: 3;
+    pointer-events: none;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.06) 45%,
+      rgba(255, 255, 255, 0.14) 50%,
+      rgba(255, 255, 255, 0.06) 55%,
+      transparent
+    );
+    animation: vhs-tracking 6s linear infinite;
+  }
+
+  /* Static noise */
+  .vhs-noise {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    opacity: 0.07;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    animation: vhs-noise 0.4s steps(4) infinite;
+  }
+
+  /* Vignette */
+  .vhs-vignette {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.45) 100%);
+  }
+
+  /* Micro-jitter (applied to the whole frame) */
+  .vhs-jitter {
+    animation: vhs-jitter 0.25s steps(4) infinite;
+  }
+
+  @keyframes vhs-tracking {
+    0% { top: -25%; }
+    100% { top: 110%; }
+  }
+
+  @keyframes vhs-flicker {
+    0%,
+    100% { opacity: 1; }
+    50% { opacity: 0.82; }
+  }
+
+  @keyframes vhs-noise {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-5px, 3px); }
+    50% { transform: translate(5px, -3px); }
+    75% { transform: translate(-3px, -5px); }
+    100% { transform: translate(3px, 5px); }
+  }
+
+  @keyframes vhs-jitter {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-1px, 1px); }
+    50% { transform: translate(1px, -1px); }
+    75% { transform: translate(-1px, -1px); }
+    100% { transform: translate(0, 0); }
+  }
+
   @keyframes text-sparkle {
     0%,
     100% {
